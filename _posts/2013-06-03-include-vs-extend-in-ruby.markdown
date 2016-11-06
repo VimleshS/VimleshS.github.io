@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby]
+comments: true
 ---
 
 **include** : Mixes in specified module methods as **instance methods** in the target class

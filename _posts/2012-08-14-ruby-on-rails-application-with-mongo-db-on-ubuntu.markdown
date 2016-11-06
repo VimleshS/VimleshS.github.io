@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby, rails, ubuntu, mongodb]
+comments: true
 ---
 
 The very first question arises is ,What is MongoDB ? and How its different ?

@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby, rails, gem]
+comments: true
 ---
 
 If you are facing "Failed to build gem native extension" error while installing mysql and pg gem on ubuntu, which might look like

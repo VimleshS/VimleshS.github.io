@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby, rails]
+comments: true
 ---
 
 There was a requirement in the Rails project I was working on, to display application's technical information like Ruby version & Rails version which the application is using in an "Application Info" page in the production servers which was having many RoR applications running on different Rail's version.

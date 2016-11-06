@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby, rails, unicode, oracle]
+comments: true
 ---
 
 Few days back, I faced an issue related to unicode characters in my application (Ruby version - 1.8.7, Rails Version - 3.2.2). So, I am highlighting few area's which one should take care of while dealing with unicode characters.

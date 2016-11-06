@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby, rails, ubuntu, windows, vmware player]
+comments: true
 ---
 
 If you are a Ruby On Rails developer and you have laptop or desktop with Windows OS, then you might get frustrated with the speed of execution of your application.

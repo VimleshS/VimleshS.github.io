@@ -4,6 +4,7 @@ layout: post
 published: true
 category: programming
 tags: [ruby]
+comments: true
 ---
 
 Often we come across this **#FiveWordTechHorror** **"invalid byte sequence in UTF-8"** while working on Ruby projects or projects built on Ruby Framework (Ex : Rails).
