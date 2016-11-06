@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-<script src="//about.me/embed/priti.biyani"></script>
+Hi, I am Amit Thawait. I am a web developer working in Ruby on Rails and Javascript. I live in Pune, India.
 
-People learn by experiences and this is my sheer attempt to share some of the thoughts, learning, experiences and ideas on technology, life, art and everything else! ...
+With this blog I am just tring to share my day to day learnings.

@@ -47,10 +47,10 @@ end
 
 desc 'Create tag'
 task :add_tags do
-	tags       = prompt_for_message 'Enter tag names separated by space '
-	tags_array = tags.split(' ')
+	tags       = prompt_for_message 'Enter tag names separated by comma :'
+	tags_array = tags.split(',')
 	tags_array.each do |t|
-		tag = { 'slug' => t.downcase, 'name' => t }
+		tag = { 'slug' => t.downcase.strip, 'name' => t.strip }
 		generate_tag_file tag
 	end
 end
@@ -64,7 +64,7 @@ task :add_tag do
 end
 
 def generate_tag_file(tag)
-	file_path = "_my_tags/#{tag['name']}.md"
+	file_path = "_my_tags/#{tag['name'].gsub(' ', '-')}.md"
 	file      = File.join(File.dirname(__FILE__), file_path)
 	File.open(file, "w") do |f|
 		f << <<-EOS.gsub(/^    /, '')
