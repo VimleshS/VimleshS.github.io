@@ -1,4 +1,0 @@
----
-slug: testStrategy
-name: TestStrategy
----

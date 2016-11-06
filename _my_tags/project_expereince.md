@@ -1,4 +1,0 @@
----
-slug: projectExperience
-name: ProjectStories
----
