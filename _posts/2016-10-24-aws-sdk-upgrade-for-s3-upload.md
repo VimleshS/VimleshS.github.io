@@ -1,5 +1,5 @@
 ---
-title: aws-sdk upgrade for file upload in S3 
+title: Faster & efficient file upload in S3 using aws-sdk version 2.x 
 layout: post
 published: true
 category: programming
@@ -15,9 +15,8 @@ We were using an older version of SDK (1.8.1.1), while the latest version is 2.6
 
 AWS-SDK version 2.x introduces a new API named Aws::S3::Resource which
 
-**1. uses multipart APIs for large objects**
-
-**2. uses multiple threads to upload parts in parallel, improving upload speed**
+1. **uses multipart APIs for large objects**
+2. **uses multiple threads to upload parts in parallel, improving upload speed**
 
 To access S3 in SDK 1.x we used to set AWS config as 
 
