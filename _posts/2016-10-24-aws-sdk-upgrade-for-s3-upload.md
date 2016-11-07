@@ -3,7 +3,7 @@ title: Faster & efficient file upload in S3 using aws-sdk version 2.x
 layout: post
 published: true
 category: programming
-tags: [ruby, rails, aws-sdk, S3]
+tags: [ruby, rails, aws-sdk, s3]
 comments: true
 ---
 
@@ -32,8 +32,8 @@ To fix this just mention region in AWS config initializer as:
 
 Another notable change is : I have mentioned logger config option as well for 2.x otherwise AWS-SDK will not log create, delete object loggers in the rails log file.
 
-Creating a file in S3 :
------------------------
+<br>
+**Creating a file in S3 :**
 
 Using AWS-SDK 1.x we used to upload a file to S3 like this :
 
@@ -52,8 +52,8 @@ In the newer Resource API, the method to create a file in S3 bucket is put_objec
 
 Refer <a href="http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Bucket.html#put_object-instance_method" target="_blank">http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Bucket.html#put_object-instance_method</a> for detailed list of options.
 
-Deleting a file in S3 :
------------------------
+<br>
+**Deleting a file in S3 :**
 
 Using AWS-SDK 1.x, command to delete a file is
 
