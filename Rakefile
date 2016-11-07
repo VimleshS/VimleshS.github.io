@@ -1,4 +1,4 @@
-require 'Date'
+require 'date'
 require 'yaml'
 
 def prompt_for_message(message)
@@ -9,7 +9,7 @@ end
 
 desc 'create a new draft post'
 task :new_post do
-	title = prompt_for_message 'Enter new post title'
+	title = prompt_for_message 'Enter new post title :'
 	slug  = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
 	file  = File.join(File.dirname(__FILE__), '_posts', slug + '.markdown')
 
