@@ -1,11 +1,11 @@
 # Site settings
-title: "Amit Thawait"
+title: "Vimlesh Sharma"
 baseurl: "" # the subpath of your site, e.g. /blog/
 permalink: /blog/:title
-url: "https://amit-thawait.github.io" # the base hostname & protocol for your site
-twitter_username: Amit_Thawait
-github_username:  amit-thawait
-description: "My day to day learnings"
+url: "https://VimleshS.github.io" # the base hostname & protocol for your site
+twitter_username: VimleshSSharma
+github_username:  VimleshS
+description: "A concise note of my finding"
 yaml gems: ['emoji_for_jekyll']
 gem: [jekyll-admin]
 

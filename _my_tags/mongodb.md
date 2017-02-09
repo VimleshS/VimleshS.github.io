@@ -1,4 +1,0 @@
----
-name: mongodb
-slug: mongodb
----

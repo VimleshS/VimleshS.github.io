@@ -1,4 +1,0 @@
----
-name: gem
-slug: gem
----

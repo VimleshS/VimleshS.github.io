@@ -1,5 +1,7 @@
-amit-thawait.github.io
+vimleshs.github.io
 ----------------------
+
+# [Install help on Windows](http://stackoverflow.com/questions/39179377/windows-bundle-install-home-environment-variable-or-homedrive-and-homepath-mu)
 
 ### Setup Prerequisites :
 
@@ -13,6 +15,6 @@ Run the following command to setup this github repo as your blog
 
 2. `bundle install`
 
-3. `bundle exec jekyll serve --baseurl ''`
+3. `bundle exec jekyll serve --baseurl ''` / `bundle exec jekyll serve`
 
 4. visit http://127.0.0.1:4000/ in the browser
