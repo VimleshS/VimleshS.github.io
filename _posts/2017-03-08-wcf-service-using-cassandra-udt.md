@@ -20,11 +20,11 @@ This is a brief note on how to use Apache Cassandra's user-defined types with C#
 
 #### 1. Create User Defined Type(Udt)
 
-Create a user-defined type for  <u>address, fullname & users</u> as mentioned in [datastax tutorial for udt](https://docs.datastax.com/en/cql/3.1/cql/cql_using/cqlUseUDT.html)
+Create a user-defined type for  <u>address, fullname & users</u> as mentioned in [datastax tutorial for udt](https://docs.datastax.com/en/cql/3.1/cql/cql_using/cqlUseUDT.html){:target="_blank"}
 
 #### 2. Create a mapper object for Udt in 'C#'
 
-Create a [cqlpoco](https://github.com/LukeTillman/cqlpoco) in our case that will also be a Data Contract.
+Create a [cqlpoco](https://github.com/LukeTillman/cqlpoco){:target="_blank"} in our case that will also be a Data Contract.
 
 *class for `address`*
 
@@ -60,11 +60,11 @@ public class FullName
     }
 ```
 
-for other data type mapping refer [CQL data types to C# types](http://datastax.github.io/csharp-driver/features/datatypes/)
+for other data type mapping refer [CQL data types to C# types](http://datastax.github.io/csharp-driver/features/datatypes/){:target="_blank"}
 
 #### 3. Register C# Udt object
 
-Configure poco object to the Apache Cassandra driver using [Mapper Component](http://datastax.github.io/csharp-driver/features/components/mapper/#configuring-mappings).
+Configure poco object to the Apache Cassandra driver using [Mapper Component](http://datastax.github.io/csharp-driver/features/components/mapper/#configuring-mappings){:target="_blank"}.
 
 *Map user-defined type (FullName and Address)*
 
@@ -148,6 +148,6 @@ It is a trivial task, decorate poco we just created with the DataMember attribut
 
 ---
 
-:point_right: Complete source code for the above demo can be found at [github](https://github.com/VimleshS/wcf_on_iis_with_cassandra)
+:point_right: Complete source code for the above demo can be found at [github](https://github.com/VimleshS/wcf_on_iis_with_cassandra){:target="_blank"}
 
 ---
