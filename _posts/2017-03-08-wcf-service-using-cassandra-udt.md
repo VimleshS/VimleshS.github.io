@@ -28,7 +28,7 @@ Create a [cqlpoco](https://github.com/LukeTillman/cqlpoco){:target="_blank"} in 
 
 *class for `address`*
 
-``` csharp
+{% highlight csharp %}
     public class Address
     {
         public string Street { get; set; }
@@ -36,21 +36,21 @@ Create a [cqlpoco](https://github.com/LukeTillman/cqlpoco){:target="_blank"} in 
         public int ZipCode { get; set; }
         public IEnumerable<string> Phones { get; set; }
     }
-```
+{% endhighlight %}
 
 *class for `fullname`*
 
-``` csharp
+{% highlight csharp %}
 public class FullName
  {
      public string FirstName { get; set; }
      public string LastName { get; set; }
  }
-```
+{% endhighlight %}
 
 *finally, a class which represent a row in cassandra `users` table*
 
-``` csharp
+{% highlight csharp %}
     public class User
     {
         public Guid Id { get; set; }
@@ -58,7 +58,7 @@ public class FullName
         public IEnumerable<FullName> DirectReport { get; set; }
         public FullName Name { get; set; }
     }
-```
+{% endhighlight %}
 
 for other data type mapping refer [CQL data types to C# types](http://datastax.github.io/csharp-driver/features/datatypes/){:target="_blank"}
 
@@ -68,7 +68,7 @@ Configure poco object to the Apache Cassandra driver using [Mapper Component](ht
 
 *Map user-defined type (FullName and Address)*
 
-``` csharp
+{% highlight csharp %}
 session.UserDefinedTypes.Define(
           UdtMap.For<FullName>(),
           UdtMap.For<Address>()
@@ -77,24 +77,24 @@ session.UserDefinedTypes.Define(
              .Map(a => a.ZipCode, "zip_code")
              .Map(a => a.Phones, "phones")
       );
-```
+{% endhighlight %}
 
 In most of the cases, mapper will do the mapping for simple type like `Fullname` but a better controlled mapping is also possible like `Address` where we map field by field.
 
 *Map `User` class representing a row in a table*
 
-``` csharp
+{% highlight csharp %}
    Cassandra.Mapping.MappingConfiguration.Global.Define(new Map<User>().TableName("users")
                 .Column(c => c.Id, cm => cm.WithName("id"))
                 .Column(c => c.Addresses, cm => cm.WithName("addresses").WithFrozenKey())
                 .Column(c => c.DirectReport, cm => cm.WithName("direct_reports").WithFrozenValue()));
-```
+{% endhighlight %}
 
 #### 4. Connect to Cassandra cluster and create session
 
 We are done with the cassandra and C# setup, now connect to cluster and use.
 
-``` csharp
+{% highlight csharp %}
           cluster = Cluster.Builder().AddContactPoint("127.0.0.1").Build();
           session = cluster.Connect("mykeyspace");
 
@@ -104,13 +104,13 @@ We are done with the cassandra and C# setup, now connect to cluster and use.
               .FirstOrDefault()
               .Execute();
 
-```
+{% endhighlight %}
 
 #### 5. Setting up a WCF 
 
 It is a trivial task, decorate poco we just created with the DataMember attribute, declare OperationContract and provide a definition. Register mapping (step 3) preferably with a memoization library. I leveraged service contructor to initialise the mapping.
 
-``` csharp
+{% highlight csharp %}
     public class UserService : IUserService
     {
         static UserServiceLibrary.Data.DataService dataService;
@@ -119,13 +119,13 @@ It is a trivial task, decorate poco we just created with the DataMember attribut
             dataService = new UserServiceLibrary.Data.DataService();
         }
     }    
-``` 
+{% endhighlight %}
 
 #### 6. Hosting WCF service
 
 *WCF Rest service can be either self hosted using `WebServiceHost`*
 
-``` csharp
+{% highlight csharp %}
 	WebServiceHost webhost =  new WebServiceHost(typeof(UserService));
             try
             {
@@ -140,7 +140,7 @@ It is a trivial task, decorate poco we just created with the DataMember attribut
                 webhost.Abort();
             }
         }	
-```
+{% endhighlight %}
 *or host it in IIS to take the advantage of on-demand loading and application pool using*
 
 	<%@ ServiceHost Service="WcfWebService.UserService" 
