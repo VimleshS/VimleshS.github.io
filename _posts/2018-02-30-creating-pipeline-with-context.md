@@ -7,9 +7,9 @@ tags: [golang, context]
 comments: true
 ---
 
-This is a brief note on how to setup and handle cancellation in a context. Lets start by simulating arbitary problem
-statement of squaring some number and multiplying it with result obtained from upstream pipeline. Here, I am using 
-fibonacci just to replicate some longer running process in upstream pipeline.
+This is a brief note on how to setup and handle cancellation in a context. Lets start by simulating arbitrary problem
+statement of squaring a number and multiplying it with result obtained from upstream pipeline. Here, I am using 
+fibonacci just to replicate long running process in upstream pipeline.
 
 {% highlight golang %}
 func fib(n int) int {
