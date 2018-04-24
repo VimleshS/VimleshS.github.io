@@ -96,3 +96,5 @@ In main, create a cancellable context and pass it to pipeline so that it can be 
    > 0
 
    > #goroutines: 3
+
+:accept: Suggestion and changes are wellcome.
