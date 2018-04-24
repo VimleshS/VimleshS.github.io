@@ -1,5 +1,5 @@
 ---
-title: Context pipeline and cancellation
+title: Context, pipeline and cancellation
 layout: post
 published: true
 category: programming
